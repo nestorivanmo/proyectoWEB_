@@ -13,7 +13,7 @@
 
 body {
 /* Ubicación de la imagen */
-/*background-image: url(img/fondo1.jpg);*/
+background-image: url(../img/fondo1.jpg);
 /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
 background-position: center center;
 /* Para que la imagen de fondo no se repita */
@@ -23,5 +23,29 @@ background-attachment: fixed;
 /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
 background-size: cover;
 /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
-background-color: #B0E5E5;
+background-color: black;
+
+animation: cambiarfondo 20s;
+animation-iteration-count: infinite;
+}
+
+@keyframes cambiarfondo {
+	0% {
+		background-image: url(../img/fondo1.jpg);
+	}
+	30% {
+		background-image: url(../img/fondo1.jpg);
+	}
+	35% {
+		background-image: url(../img/p3.jpg);
+	}
+	65% {
+		background-image: url(../img/p3.jpg);
+	}
+	70% {
+		background-image: url(../img/p9.jpg);
+	}
+	95% {
+		background-image: url(../img/p9.jpg);
+	}
 }
