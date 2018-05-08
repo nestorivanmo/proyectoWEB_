@@ -7,13 +7,14 @@
 	background: transparent !important;
 }
 
+
 .carrito {
 	margin-top: 20px;
 }
 
-body {
-/* Ubicación de la imagen */
-/*background-image: url(img/fondo1.jpg);*/
+body{
+/* Ubicación de la imagen 
+/*background-image: url(img/fondo1.jpg);
 /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
 background-position: center center;
 /* Para que la imagen de fondo no se repita */
