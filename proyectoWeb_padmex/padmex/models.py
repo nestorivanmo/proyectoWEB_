@@ -28,14 +28,14 @@ class Pedido(models.Model):
     )
     status = models.CharField(max_length=20)
     def __str__(self):
-        return self.cliente_FK + ' - ' + self.fecha + ' - ' + self.status
+        return self.cliente_FK.nombre + ' - ' + self.fecha.strftime('%Y-%M-%d') + ' - ' + self.status
 
 class Detalle(models.Model):
     pedido_FK = models.ForeignKey(Pedido, on_delete=models.CASCADE)
     producto_FK = models.ForeignKey(Producto, on_delete=models.CASCADE)
     cantidad = models.CharField(max_length=20)
     def __str__(self):
-        return self.pedido_FK + ' - ' + self.producto_FK + ' - ' + self.cantidad
+        return  self.producto_FK.nombreProd + ' - ' + self.cantidad
 
 class Cita(models.Model):
     cliente_FK = models.ForeignKey(Cliente, on_delete=models.CASCADE)

@@ -1,24 +1,19 @@
-from django.http import Http404
-from django.http import HttpResponse
-from django.shortcuts import render
-from .models import Cliente
+from django.views import generic
+from django.views.generic import View
+from .models import Detalle
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from .forms import UserForm
 
-def index(request):
-    all_clients = Cliente.objects.all()
-    context = {'all_clients':all_clients,}
-    return render(request, 'padmex/index.html', context)
+class IndexView(generic.ListView):
+    template_name = 'padmex/index.html'
 
-def olimpicas(request):
-    all_clients = Cliente.objects.all()
-    return render(request, 'padmex/olimpicas.html', {'all_clients': all_clients, })
+    def get_queryset(self):
+        return Detalle.objects.all()
 
-def detail(request, cliente_id):
-    try:
-        cliente = Cliente.objects.get(pk=cliente_id)
-    except Cliente.DoesNotExist:
-        raise Http404("No se encuentra la página -> padmex")
-    return render(request, 'padmex/details.html', {'cliente':cliente,})
+class DetailView(generic.ListView):
+    model = Detalle
+    template_name = 'padmex/olimpicas.html'
 
-
-def albercaOlimpica(request, cliente_id):
-    return HttpResponse("<h3>alebrcas olimpicas" + str(cliente_id) + "</h3>")
+class UserFormView(View):
+    form_class = UserForm

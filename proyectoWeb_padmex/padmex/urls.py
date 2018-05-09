@@ -3,11 +3,12 @@ from . import views
 
 urlpatterns = [
     # /padmex/
-    path('', views.index, name='index'),
+    path('', views.IndexView.as_view(), name='index'),
+    path('olimpicas', views.DetailView.as_view(), name="olimpicas")
 
     # /padmex/olimpicas
-    path('olimpicas', views.olimpicas, name='olimpicas'),
+    #path('olimpicas', views.olimpicas, name='olimpicas'),
 
     # /padmex/cliente_id
-    re_path(r'^(?P<cliente_id>[0-9]+)/$', views.albercaOlimpica, name='albercaolimpica'),
+   # re_path(r'olimpicas/(?P<pk>[0-9]+)/$', views.DetailView.as_view(),name='olimpicas'),
 ]
