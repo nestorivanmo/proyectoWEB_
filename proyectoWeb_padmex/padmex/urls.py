@@ -5,6 +5,9 @@ urlpatterns = [
     # /padmex/
     path('', views.index, name='index'),
 
+    # /padmex/olimpicas
+    path('olimpicas', views.olimpicas, name='olimpicas'),
+
     # /padmex/cliente_id
     re_path(r'^(?P<cliente_id>[0-9]+)/$', views.albercaOlimpica, name='albercaolimpica'),
 ]
