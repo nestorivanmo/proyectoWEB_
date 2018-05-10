@@ -4,11 +4,7 @@ from . import views
 urlpatterns = [
     # /padmex/
     path('', views.IndexView.as_view(), name='index'),
-    path('olimpicas', views.DetailView.as_view(), name="olimpicas")
-
-    # /padmex/olimpicas
-    #path('olimpicas', views.olimpicas, name='olimpicas'),
-
-    # /padmex/cliente_id
-   # re_path(r'olimpicas/(?P<pk>[0-9]+)/$', views.DetailView.as_view(),name='olimpicas'),
+    path('olimpicas', views.VerOlimpicas.as_view(), name="olimpicas"),
+    path('residenciales', views.VerResidenciales.as_view(), name="residenciales"),
+    path('productos', views.VerProductos.as_view(), name="productos"),
 ]
