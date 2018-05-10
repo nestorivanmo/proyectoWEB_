@@ -7,8 +7,9 @@
 <body>
     <h1>Detalles</h1>
     {% for detalle in object_list %}
-        <p>{{ detalle.producto_FK.nombreProd }}</p>
+        <p>{{ detalle.id }}</p>
         <p>{{ detalle.producto_FK.descripcionProd }}</p>
+        <p>{{ detalle.producto_FK.precio }}</p>
     {% endfor %}
 </body>
 </html>

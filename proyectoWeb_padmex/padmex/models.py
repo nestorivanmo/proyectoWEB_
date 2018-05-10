@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from django import forms
+from django.urls import reverse
 
 # Create your models here.
 
@@ -12,6 +12,8 @@ class Cliente(models.Model):
     telefono = models.CharField(max_length=20, default=" ")
     def __str__(self):
         return self.nombre + ' - ' + self.usuario + ' - ' + self.correo + ' - ' + self.telefono
+    def _get_pk_val(self, meta=None):
+        return reverse('padmex:url', kwargs={'pk': self.pk})
 
 class Producto(models.Model):
     nombreProd = models.CharField(max_length=200)
