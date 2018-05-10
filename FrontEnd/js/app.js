@@ -3,4 +3,5 @@ $(document).ready(function(){
 	$(".dropdown-trigger").dropdown();
 	$('.slider').slider();
 	$('.collapsible').collapsible();
+	$('.parallax').parallax();
 });
