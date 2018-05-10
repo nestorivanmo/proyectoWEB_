@@ -1,3 +1,30 @@
+body {
+/* Ubicación de la imagen */
+/*background-image: url(../img/fondo1.jpg);*/
+/* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+background-position: center center;
+/* Para que la imagen de fondo no se repita */
+background-repeat: no-repeat;
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+background-attachment: fixed;
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+background-size: cover;
+/* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+background-color: black;
+}
+
+div {
+	text-align: justify;
+}
+
+h3, h4, h6 {
+	text-align: center;
+}
+
+.margen {
+	margin: 10px;
+}
+
 .logo {
 	height: 50px;
 	margin: 7px;
@@ -11,41 +38,43 @@
 	margin-top: 20px;
 }
 
-body {
-/* Ubicación de la imagen */
-background-image: url(../img/fondo1.jpg);
-/* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
-background-position: center center;
-/* Para que la imagen de fondo no se repita */
-background-repeat: no-repeat;
-/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
-background-attachment: fixed;
-/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
-background-size: cover;
-/* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
-background-color: black;
-
-animation: cambiarfondo 20s;
-animation-iteration-count: infinite;
+.negro {
+	color: white !important;
+	background-color:rgba(0,0,0,0.7);
+	border-radius: 10px;
 }
 
-@keyframes cambiarfondo {
-	0% {
-		background-image: url(../img/fondo1.jpg);
-	}
-	30% {
-		background-image: url(../img/fondo1.jpg);
-	}
-	35% {
-		background-image: url(../img/p3.jpg);
-	}
-	65% {
-		background-image: url(../img/p3.jpg);
-	}
-	70% {
-		background-image: url(../img/p9.jpg);
-	}
-	95% {
-		background-image: url(../img/p9.jpg);
-	}
+.azul {
+	color: white !important;
+	background-color:rgba(32,48,64,0.9); /*#203040*/
+}
+
+.blanco {
+	color: black !important;
+	background-color:rgba(255,255,255,0.7);
+	border-radius: 10px;
+}
+
+.amarillo {
+	color: black !important;
+	background-color:rgba(222,180,0,0.7); /*#DEB400*/
+	border-radius: 10px;
+}
+
+.boton {
+	color: white;
+	padding: 12px;
+	margin: 12px;
+	width: 190px;
+	height: 40px;
+	text-align: center;
+}
+
+.lb {
+	color: white !important;
+}
+
+.cbrb {
+	background-color: #476D93;
+	border-radius: 10px;		
 }
