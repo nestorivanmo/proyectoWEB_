@@ -118,3 +118,7 @@ p {
 .parallax-container {
 	height: 200px;
 }
+.img{
+	width: 720px;
+	height: 480px;
+}
