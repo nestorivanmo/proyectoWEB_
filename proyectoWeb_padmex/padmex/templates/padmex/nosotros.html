@@ -145,7 +145,7 @@ p {
 
 		<div class="row">
 			<div class="col m4 s12">
-				<a href="index.html" class="brand-logo"><img class="logo" src="img/padmex_logo.png"></a>
+				<a href="index.html" class="brand-logo"><img class="logo" src="../../static/padmex/img/padmex_logo.png"></a>
 			</div>
 			<div class="col m4 s12">
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -158,7 +158,7 @@ p {
 			<div class="col m4 s12">
 				<ul class="right hide-on-med-and-down">
 	    			<li><a href="#">Sing In/Up</a></li>
-	    			<li><a href="#"><img class="carrito" src="img/carritoComprasB.png"></a></li>
+	    			<li><a href="#"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"></a></li>
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
 			</div>
@@ -167,8 +167,8 @@ p {
 	</div>
 
 	<ul class="sidenav" id="mobile-demo">
-		<li><a href="albercaOlimpica.html">Alberca Olímpica</a></li>
-		<li><a href="albercaResidencial.html">Alberca Residencial</a></li>
+		<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
+		<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
 		<li><a href="productos.html">Productos</a></li>
 		<li class="divider"></li>
 		<li><a href="#">Sing In/Up</a></li>
@@ -177,13 +177,13 @@ p {
 	</ul>
 
 	<ul id="dropdown1" class="dropdown-content dd">
-		<li><a class="negro" href="nosotros.html">Nosotros</a></li>
+		<li><a class="negro" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
 		<li><a class="ln" href="contacto.html">Contacto</a></li>
 		<li><a class="ln" href="ubicaciones.html">Ubicaciones</a></li>
 	</ul>
 
 	<ul id="dropdown2" class="dropdown-content">
-		<li><a class="negro" href="nosotros.html">Nosotros</a></li>
+		<li><a class="negro" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
 		<li><a class="ln" href="contacto.html">Contacto</a></li>
 		<li><a class="ln" href="ubicaciones.html">Ubicaciones</a></li>
 	</ul>
@@ -201,7 +201,7 @@ p {
 					<h5 class="lob"><STRONG>Construimos Albercas Olímpicas, Semiolímpicas y Residenciales desde hace <br> ¡más de 50 AÑOS!</STRONG></h5>
 			</div>
 			<div id="nosotros" class="parallax-container">
-    			<div class="parallax"><img src="img/fondo1.jpg"></div>
+    			<div class="parallax"><img src="../../static/padmex/img/fondo1.jpg"></div>
     		</div>
     		<div class="section tranparent">
 				<div class="row">
@@ -214,7 +214,7 @@ p {
 				</div>
 			</div>
     		<div id="nosotros" class="parallax-container">
-    			<div class="parallax"><img src="img/p3.jpg"></div>
+    			<div class="parallax"><img src="../../static/padmex/img/p3.jpg"></div>
     		</div>
     		<div class="section tranparent">
 				<div class="row">

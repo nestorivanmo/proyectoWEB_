@@ -156,7 +156,7 @@ p {
 			</div>
 			<div class="col m4 s12">
 				<ul class="right hide-on-med-and-down">
-	    			<li><a href="#">Sign In/Up</a></li>
+	    			<li><a href="{% url 'padmex:controlador' %}">Sign In/Up</a></li>
 	    			<li><a href="#"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
@@ -170,7 +170,7 @@ p {
 		<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
 		<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 		<li class="divider"></li>
-		<li><a href="#">Sing In/Up</a></li>
+		<li><a href="{% url 'login' %}">Sign In/Up</a></li>
 		<li><a href="#">Carrito</a></li>
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>

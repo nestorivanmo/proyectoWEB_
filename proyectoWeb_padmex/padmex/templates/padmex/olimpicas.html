@@ -168,8 +168,8 @@ p {
 		</div>
 
 		<ul class="sidenav" id="mobile-demo">
-			<li><a href="albercaOlimpica.html">Alberca Olímpica</a></li>
-			<li><a href="albercaResidencial.html">Alberca Residencial</a></li>
+			<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
+			<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
 			<li><a href="productos.html">Productos</a></li>
 			<li class="divider"></li>
 			<li><a href="#">Sign In/Up</a></li>
@@ -178,13 +178,13 @@ p {
 		</ul>
 
 		<ul id="dropdown1" class="dropdown-content">
-			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
 			<li><a href="contacto.html">Contacto</a></li>
 			<li><a href="ubicaciones.html">Ubicaciones</a></li>
 		</ul>
 
 		<ul id="dropdown2" class="dropdown-content">
-			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
 			<li><a href="contacto.html">Contacto</a></li>
 			<li><a href="ubicaciones.html">Ubicaciones</a></li>
 		</ul>

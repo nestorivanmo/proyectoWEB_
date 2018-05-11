@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('padmex.urls')),
     re_path(r'^login/', login_view, name='login'),
     re_path(r'^logout/', login_view, name='logout'),
+    re_path(r'^register/', register_view, name='register'),
 ]
