@@ -3,14 +3,14 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>PadMex | Alberca Residencial</title>
+	<title>PadMex | Nosotros</title>
 	<link  rel="stylesheet" type="text/css" href="{% static 'padmex/css/style.css' %}"/>
     <link rel="icon" type="text/css" href="{% static 'padmex/img/padmex_logo.png' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'padmex/css/materialize.min.css' %}"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Questrial" rel="stylesheet">
 
-   <style>
+ <style>
      /*------------------------------------------------------------
 --------------------------->ESTILOS<--------------------------
 ------------------------------------------------------------*/
@@ -137,29 +137,28 @@ p {
 	height: 480px;
 }
     </style>
-
 </head>
-<body background="../../static/padmex/img/fondo8.jpg">
+<body  background="../../static/padmex/img/fondo8.jpg">
 
 	<div class="navbar-fixed">
 	<nav class="azul">
 
 		<div class="row">
 			<div class="col m4 s12">
-				<a href="{% url 'padmex:index' %}" class="brand-logo"><img class="logo" src="../../static/padmex/img/padmex_logo.png"></a>
+				<a href="index.html" class="brand-logo"><img class="logo" src="img/padmex_logo.png"></a>
 			</div>
 			<div class="col m4 s12">
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
 	    			<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
-	    			<li><a class="negro" href="#">Alberca Residencial</a></li>
+	    			<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
 	    			<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 	    		</ul>
 			</div>
 			<div class="col m4 s12">
 				<ul class="right hide-on-med-and-down">
-	    			<li><a href="#">Sign In/Up</a></li>
-	    			<li><a href="#"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"></a></li>
+	    			<li><a href="#">Sing In/Up</a></li>
+	    			<li><a href="#"><img class="carrito" src="img/carritoComprasB.png"></a></li>
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
 			</div>
@@ -168,9 +167,9 @@ p {
 	</div>
 
 	<ul class="sidenav" id="mobile-demo">
-		<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
-		<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
-		<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
+		<li><a href="albercaOlimpica.html">Alberca Olímpica</a></li>
+		<li><a href="albercaResidencial.html">Alberca Residencial</a></li>
+		<li><a href="productos.html">Productos</a></li>
 		<li class="divider"></li>
 		<li><a href="#">Sing In/Up</a></li>
 		<li><a href="#">Carrito</a></li>
@@ -178,112 +177,51 @@ p {
 	</ul>
 
 	<ul id="dropdown1" class="dropdown-content dd">
-		<li><a class="ln" href="nosotros.html">Nosotros</a></li>
+		<li><a class="negro" href="nosotros.html">Nosotros</a></li>
 		<li><a class="ln" href="contacto.html">Contacto</a></li>
 		<li><a class="ln" href="ubicaciones.html">Ubicaciones</a></li>
 	</ul>
 
 	<ul id="dropdown2" class="dropdown-content">
-		<li><a class="ln" href="nosotros.html">Nosotros</a></li>
+		<li><a class="negro" href="nosotros.html">Nosotros</a></li>
 		<li><a class="ln" href="contacto.html">Contacto</a></li>
 		<li><a class="ln" href="ubicaciones.html">Ubicaciones</a></li>
 	</ul>
 
 	<main>
+
 		<div class="container">
 			<div class="row">
-				<div class="col s12 cuadro negro fjo">
-					<h4>Interiores</h4>
+				<div class="col m8 s12 offset-m2 cuadro negro">
+					<h4 class="fjo">PISCINAS PADMEX, S.A. DE C.V.</h4>
 				</div>
 			</div>
-			<div class="row">
-			  <div class="slider">
-			    <ul class="slides">
-			      <li>
-			        <img src="../../static/padmex/img/fondo1.jpg">
-			      </li>
-			      <li>
-			        <img src="../../static/padmex/img/p11.jpg">
-			      </li>
-			      <li>
-			        <img src="../../static/padmex/img/p14.jpg">
-			      </li>
-			      <li>
-			        <img src="../../static/padmex/img/p15.jpg">
-			      </li>
-			      <li>
-			        <img src="../../static/padmex/img/p13.jpg">
-			      </li>
-			    </ul>
-			  </div>
-			 </div>
-
-			<div class="row">
-				<div class="col m8 s12">
-					<p>Tu piscina debe ser sinónimo de espacio de desconexión. El descanso en tu piscina te ayudará a desconectar del estrés diario al que estamos sometidos. Haz del interior de tu casa un elegante y refrescante espacio. Disfruta de tu piscina cuando vuelvas del trabajo, justo al levantarte por la mañana o durante la noche.</p>
-				</div>
-				<div class="col m3 s12 offset-m1">
-					<div class="row">
-						<div class="col s12">
-							<center>
-								<p class="boton negro"><a class="lb" href="contacto.html">¡Haz una cita!</a></p>
-							</center>
-						</div>
-						<div class="col s12">
-							<center>
-								<p class="boton negro"><a class="lb" href="galeria.html">Ver galería</a></p>
-							</center>
-						</div>
+			<div class="col s12 cuadro2 azul">
+					<h3 class="fjo">La ciencia y el Arte de las Albercas</h3>
+					<h5 class="lob"><STRONG>Construimos Albercas Olímpicas, Semiolímpicas y Residenciales desde hace <br> ¡más de 50 AÑOS!</STRONG></h5>
+			</div>
+			<div id="nosotros" class="parallax-container">
+    			<div class="parallax"><img src="img/fondo1.jpg"></div>
+    		</div>
+    		<div class="section tranparent">
+				<div class="row">
+					<div class="container col m4 s12">
+						<p class="cuadro">En el año de 1961, fue fundada la empresa con capital en su totalidad mexicano actualmente la razon social es Piscinas PadMex. El Arte </p>
+					</div>
+					<div class="container col m8 s12">
+						<p class="cuadro">Se ha dedicado al diseño, construcción, y suministro  de  equipo para Albercas Olímpicas, SemiOlímpicas y de uso particular en condominios, residencias, clubes Deportivos, Gobierno. Distribuimos equipos de las firmas mas importes de Europa y América garantizando equipos de alta tecnologia contando  con  una linea  extensa de productos.</p>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col s12 cuadro negro">
-					<h4>Exteriores</h4>
-				</div>
-			</div>
-			<div class="row">
-			  <div class="slider">
-			    <ul class="slides">
-			      <li>
-			        <img src="../../static/padmex/img/p3.jpg">
-			      </li>
-			      <li>
-			        <img src="../../static/padmex/img/p4.jpg">
-			      </li>
-			      <li>
-			        <img src="../../static/padmex/img/p7.jpg">
-			      </li>
-			      <li>
-			        <img src="../../static/padmex/img/p8.jpg">
-			      </li>
-			      <li>
-			        <img src="../../static/padmex/img/p9.jpg">
-			      </li>
-			    </ul>
-			  </div>
-			 </div>
-
-			<div class="row">
-				<div class="col m8 s12">
-					<p>Di no al ocio sedentario con una piscina, en ella no sólo podrás practicar deporte, sino son muchos los juegos acuáticos que puedes realizar. Practica natación, aquafitness, voleibol o pon un trampolín en tu piscina. Además de fomentar una vida sana será tu mejor aliado para combatir el calor.</p>
-				</div>
-				<div class="col m3 s12 offset-m1">
-					<div class="row">
-						<div class="col s12">
-							<center>
-								<p class="boton negro"><a class="lb" href="contacto.html">¡Haz una cita!</a></p>
-							</center>
-						</div>
-						<div class="col s12">
-							<center>
-								<p class="boton negro"><a class="lb" href="galeria.html">Ver galería</a></p>
-							</center>
-						</div>
-					</div>
+    		<div id="nosotros" class="parallax-container">
+    			<div class="parallax"><img src="img/p3.jpg"></div>
+    		</div>
+    		<div class="section tranparent">
+				<div class="row">
 				</div>
 			</div>
 		</div>
+
 	</main>
 
 </body>

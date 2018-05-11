@@ -1,5 +1,287 @@
-{% extends 'padmex/base.html' %}
-{% block title %}Albercas olímpicas{% endblock %}
-{% block body %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>PadMex | Alberca Olímpica</title>
+<link  rel="stylesheet" type="text/css" href="{% static 'padmex/css/style.css' %}"/>
+    <link rel="icon" type="text/css" href="{% static 'padmex/img/padmex_logo.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'padmex/css/materialize.min.css' %}"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Questrial" rel="stylesheet">
 
-{% endblock %}
+
+ <style>
+     /*------------------------------------------------------------
+--------------------------->ESTILOS<--------------------------
+------------------------------------------------------------*/
+body {
+/* Ubicación de la imagen */
+/*background-image: url(../img/fondo1.jpg);*/
+/* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+background-position: center center;
+/* Para que la imagen de fondo no se repita */
+background-repeat: no-repeat;
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+background-attachment: fixed;
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+background-size: cover;
+/* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+background-color: white;
+}
+div {
+	text-align: justify;
+}
+h3, h4, h5, h6 {
+	text-align: center;
+	font-family: 'Fjalla One', sans-serif;
+}
+p {
+	text-align: justify;
+	font-family: 'Questrial', sans-serif;
+}
+
+/*------------------------------------------------------------
+--------------------------->CLASES<---------------------------
+------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+----------------------------FUENTES---------------------------
+------------------------------------------------------------*/
+.fjo{
+	font-family: 'Fjalla One', sans-serif;
+}
+.lob, .card-title{
+	font-family: 'Lobster', cursive;
+}
+.qu{
+	font-family: 'Questrial', sans-serif;
+}
+
+/*------------------------------------------------------------
+----------------------------COLORES---------------------------
+------------------------------------------------------------*/
+.negro {
+	color: white !important;
+	background-color:rgba(0,0,0,0.7);
+	/*border-radius: 10px;*/
+}
+.azul {
+	color: white !important;
+	background-color:rgba(32,48,64,0.5); /*#203040*/
+}
+.sombraAzul {
+	color: white !important;
+	background-color:rgba(32,48,64,0.5); /*#203040*/
+}
+.blanco {
+	color: black !important;
+	background-color:rgba(255,255,255,0.7);
+	border-radius: 10px;
+}
+.amarillo {
+	color: black !important;
+	background-color:rgba(222,180,0,0.7); /*#DEB400*/
+	border-radius: 10px;
+}
+
+.lb {
+	color: white !important;
+}
+
+.ln {
+	color: black !important;
+}
+
+/*------------------------------------------------------------
+------------------------FORMAS Y TAMAÑOS----------------------
+------------------------------------------------------------*/
+.cuadro {
+	margin: 10px;
+	padding: 20px;
+	/*border-radius: 10px;*/
+}
+.cuadro2 {
+	margin: 10px;
+	padding: 20px;
+	border-radius: 10px;
+}
+.logo {
+	height: 50px;
+	margin: 7px;
+}
+.navInicio {
+	background: transparent !important;
+}
+.carrito {
+	margin-top: 20px;
+}
+.boton {
+	color: white;
+	padding: 12px;
+	margin: 12px;
+	width: 190px;
+	height: 40px;
+	text-align: center;
+	border-radius: 10px;
+	font-family: 'Lobster', cursive;
+}
+.dd {
+	background-color: white;/*#476D93;*/
+}
+#nosotros {
+	height: 200px;
+}
+/*.img{
+
+	width: 720px;
+	height: 480px;
+}
+    </style>
+</head>
+<body background="../../static/padmex/img/AO/img.jpg">
+
+		<div class="navbar-fixed">
+			<nav class="azul">
+
+				<div class="row">
+					<div class="col m4 s12">
+						<a href="{% url 'padmex:index' %}" class="brand-logo"><img class="logo" src="../../static/padmex/img/padmex_logo.png"></a>
+					</div>
+					<div class="col m4 s12">
+						<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+						<ul class="right hide-on-med-and-down">
+							<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
+							<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
+							<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
+						</ul>
+					</div>
+					<div class="col m4 s12">
+						<ul class="right hide-on-med-and-down">
+							<li><a href="#">Sing In/Up</a></li>
+                            <li><a href="#"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"> </a></li>
+							<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<ul class="sidenav" id="mobile-demo">
+			<li><a href="albercaOlimpica.html">Alberca Olímpica</a></li>
+			<li><a href="albercaResidencial.html">Alberca Residencial</a></li>
+			<li><a href="productos.html">Productos</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Sign In/Up</a></li>
+			<li><a href="#">Carrito</a></li>
+			<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
+		</ul>
+
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+			<li><a href="ubicaciones.html">Ubicaciones</a></li>
+		</ul>
+
+		<ul id="dropdown2" class="dropdown-content">
+			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+			<li><a href="ubicaciones.html">Ubicaciones</a></li>
+		</ul>
+
+		<main>
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col s12 cuadro negro fjo">
+						<h4>Albercas Olimpicas</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="slider">
+						<ul class="slides">
+							<li>
+								<img src="../../static/padmex/img/AO/img1.jpg">
+								<div class="caption center-align">
+									<h3>This is our big Tagline!</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+							<li>
+								<img src="../../static/padmex/img/AO/img7.jpg">
+								<div class="caption left-align">
+									<h3>Left Aligned Caption</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+							<li>
+								<img src="../../static/padmex/img/AO/img3.jpg">
+								<div class="caption right-align">
+									<h3>Right Aligned Caption</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+							<li>
+								<img src="../../static/padmex/img/AO/img4.jpg">
+								<div class="caption right-align">
+									<h3>Right Aligned Caption</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+							<li>
+								<img src="../../static/padmex/img/AO/img5.jpg">
+								<div class="caption center-align">
+									<h3>This is our big Tagline!</h3>
+									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="olimpica" class="parallax-container">
+				<div class="parallax"><img src="../../static/padmex/img/AO/img.jpg"></div>
+				<div class="section container tranparent">
+					<div class="row">
+						<div class="row">
+							<div class="container col m12 s12">
+								<p class="cuadro2 blanco">Se ha dedicado al diseño, construcción, y suministro  de  equipo para Albercas Olímpicas, SemiOlímpicas y de uso particular en condominios, residencias, clubes Deportivos, Gobierno. Distribuimos equipos de las firmas mas importes de Europa y América garantizando equipos de alta tecnologia contando  con  una linea  extensa de productos.</p>
+							</div>
+							<div class="col s12">
+								<div class="row">
+									<div class="col s12">
+										<center>
+											<p class="boton negro"><a class="lb" href="contacto.html">¡Haz una cita!</a></p>
+										</center>
+									</div>
+									<div class="col s12">
+										<center>
+											<p class="boton negro"><a class="lb" href="galeria.html">Ver galería</a></p>
+										</center>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="parallax-container">
+				<div class="parallax"><img src="../../static/padmex/img/AO/img.jpg"></div>
+				<div class="container col s12">
+					<img class="img" src="../../static/padmex/img/AO/img8.jpg" >
+				</div>
+			</div>
+
+
+		</main>
+
+	</body>
+	<script type="text/javascript" src="../../static/padmex/js/jquery.js"></script>
+<script type="text/javascript" src="../../static/padmex/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../static/padmex/js/app.js"></script>
+
+	</html>

@@ -16,6 +16,10 @@ class VerResidenciales(generic.ListView):
     template_name = 'padmex/residenciales.html'
     def get_queryset(self):
         return Detalle.objects.all()
+class VerNosotros(generic.ListView):
+    template_name = 'padmex/nosotros.html'
+    def get_queryset(self):
+        return Detalle.objects.all()
 
 class VerProductos(generic.ListView):
     template_name = 'padmex/productos.html'
