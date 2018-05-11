@@ -173,7 +173,7 @@ main {
 		<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
 		<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 		<li class="divider"></li>
-		<li><a href="{% url 'login' %}">Sign In/Up</a></li>
+		<li><a href="{% url 'padmex:controlador' %}">Sign In/Up</a></li>
 		<li><a href="{% url 'padmex:carrito' %}">Carrito</a></li>
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
@@ -185,9 +185,9 @@ main {
 	</ul>
 
 	<ul id="dropdown2" class="dropdown-content">
-		<li><a href="#!">Nosotros</a></li>
-		<li><a href="#!">Contacto</a></li>
-		<li><a href="#!">Ubicaciones</a></li>
+		<li><a href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
+		<li><a href="{% url 'padmex:contactanos' %}">Contacto</a></li>
+		<li><a href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
 	</ul>
 
     {% block body %}

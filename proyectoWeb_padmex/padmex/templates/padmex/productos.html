@@ -149,20 +149,20 @@ main {
 
 		<div class="row">
 			<div class="col m4 s12">
-				<a href="index.html" class="brand-logo"><img class="logo" src="../../static/padmex/img/padmex_logo.png"></a>
+				<a href="{% url 'padmex:index' %}" class="brand-logo"><img class="logo" src="../../static/padmex/img/padmex_logo.png"></a>
 			</div>
 			<div class="col m4 s12">
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
-	    			<li><a href="albercaOlimpica.html">Alberca Olímpica</a></li>
-	    			<li><a href="albercaResidencial.html">Alberca Residencial</a></li>
-	    			<li><a class="negro" href="productos.html">Productos</a></li>
+	    			<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
+	    			<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
+	    			<li><a class="negro" href="{% url 'padmex:productos' %}">Productos</a></li>
 	    		</ul>
 			</div>
 			<div class="col m4 s12">
 				<ul class="right hide-on-med-and-down">
-	    			<li><a href="#">Sing In/Up</a></li>
-	    			<li><a href="#"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"></a></li>
+	    			<li><a href="{% url 'padmex:controlador' %}">Sign In/Up</a></li>
+	    			<li><a href="{% url 'padmex:carrito' %}"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"></a></li>
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
 			</div>
@@ -171,25 +171,25 @@ main {
 	</div>
 
 	<ul class="sidenav" id="mobile-demo">
-		<li><a href="albercaOlimpica.html">Alberca Olímpica</a></li>
-		<li><a href="albercaResidencial.html">Alberca Residencial</a></li>
-		<li><a href="productos.html">Productos</a></li>
+		<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
+		<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
+		<li><a class="negro" href="{% url 'padmex:productos' %}">Productos</a></li>
 		<li class="divider"></li>
-		<li><a href="#">Sign In/Up</a></li>
-		<li><a href="#">Carrito</a></li>
+		<li><a href="{% url 'padmex:controlador' %}">Sign In/Up</a></li>
+		<li><a href="{% url 'padmex:carrito' %}">Carrito</a></li>
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
 
 	<ul id="dropdown1" class="dropdown-content dd">
-		<li><a class="ln" href="nosotros.html">Nosotros</a></li>
-		<li><a class="ln" href="contacto.html">Contacto</a></li>
-		<li><a class="ln" href="ubicaciones.html">Ubicaciones</a></li>
+		<li><a class="ln" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
+		<li><a class="ln" href="{% url 'padmex:contactanos' %}">Contacto</a></li>
+		<li><a class="ln" href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
 	</ul>
 
 	<ul id="dropdown2" class="dropdown-content">
-		<li><a class="ln" href="nosotros.html">Nosotros</a></li>
-		<li><a class="ln" href="contacto.html">Contacto</a></li>
-		<li><a class="ln" href="ubicaciones.html">Ubicaciones</a></li>
+		<li><a class="ln" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
+		<li><a class="ln" href="{% url 'padmex:contactanos' %}">Contacto</a></li>
+		<li><a class="ln" href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
 	</ul>
 
 
