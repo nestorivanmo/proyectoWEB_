@@ -19,7 +19,7 @@ def login_view(request):
         password = form.cleaned_data.get('password')
         user = authenticate(username=username1, password=password)
         login(request, user)
-        return redirect("/")
+        return redirect("padmex:carrito")
     return render(request, "form.html", {"form": form, "title": title, "username":username1})
 
 def register_view(request):
@@ -32,7 +32,7 @@ def register_view(request):
         user.save()
         new_user = authenticate(username=user.username, password=password)
         login(request, new_user)
-        return redirect("/")
+        return redirect("padmex:carrito")
     context = {
         "form": form,
         "title": title

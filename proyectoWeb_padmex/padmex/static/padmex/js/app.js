@@ -4,5 +4,5 @@ $(document).ready(function(){
 	$('.slider').slider();
 	$('.collapsible').collapsible();
 	$('.parallax').parallax();
-	$('.pushpin').pushpin();
+	$('.materialboxed').materialbox();
 });

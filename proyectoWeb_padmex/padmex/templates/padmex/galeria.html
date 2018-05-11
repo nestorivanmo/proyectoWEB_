@@ -3,14 +3,14 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>PadMex | Nosotros</title>
+	<title>PadMex | Galería</title>
 	<link  rel="stylesheet" type="text/css" href="{% static 'padmex/css/style.css' %}"/>
     <link rel="icon" type="text/css" href="{% static 'padmex/img/padmex_logo.png' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'padmex/css/materialize.min.css' %}"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Questrial" rel="stylesheet">
 
-<style>
+    <style>
     /*------------------------------------------------------------
 --------------------------->ESTILOS<--------------------------
 ------------------------------------------------------------*/
@@ -142,7 +142,7 @@ main {
 </style>
 
 </head>
-<body  background="../../static/padmex/img/fondo8.jpg">
+<body background="../../static/padmex/img/fondo8.jpg">
 
 	<div class="navbar-fixed">
 	<nav class="azul">
@@ -161,8 +161,8 @@ main {
 			</div>
 			<div class="col m4 s12">
 				<ul class="right hide-on-med-and-down">
-	    			<li><a href="{% url 'padmex:controlador' %}">Sign In/Up</a></li>
-	    			<li><a href="{% url 'padmex:carrito' %}"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"></a></li>
+	    			<li><a href="#">Sing In/Up</a></li>
+	    			<li><a class="negro" href="carrito.html"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"></a></li>
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
 			</div>
@@ -173,21 +173,21 @@ main {
 	<ul class="sidenav" id="mobile-demo">
 		<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
 		<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
-		<li><a href="productos.html">Productos</a></li>
+		<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 		<li class="divider"></li>
-		<li><a href="{% url 'padmex:controlador' %}">Sign In/Up</a></li>
-		<li><a href="{% url 'padmex:carrito' %}">Carrito</a></li>
+		<li><a href="#">Sing In/Up</a></li>
+		<li><a href="carrito.html">Carrito</a></li>
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
 
 	<ul id="dropdown1" class="dropdown-content dd">
-		<li><a class="negro" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
+		<li><a class="ln" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
 		<li><a class="ln" href="{% url 'padmex:contactanos' %}">Contacto</a></li>
 		<li><a class="ln" href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
 	</ul>
 
 	<ul id="dropdown2" class="dropdown-content">
-		<li><a class="negro" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
+		<li><a class="ln" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
 		<li><a class="ln" href="{% url 'padmex:contactanos' %}">Contacto</a></li>
 		<li><a class="ln" href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
 	</ul>
@@ -196,39 +196,70 @@ main {
 
 		<div class="container">
 			<div class="row">
-				<div class="col m8 s12 offset-m2 cuadro negro">
-					<h4 class="fjo">PISCINAS PADMEX, S.A. DE C.V.</h4>
+				<div class="col s12 cuadro negro fjo">
+					<h4>Galería</h4>
 				</div>
 			</div>
-			<div class="col s12 cuadro2 azul">
-					<h3 class="fjo">La ciencia y el Arte de las Albercas</h3>
-					<h5 class="lob"><STRONG>Construimos Albercas Olímpicas, Semiolímpicas y Residenciales desde hace <br> ¡más de 50 AÑOS!</STRONG></h5>
-			</div>
-			<div id="nosotros" class="parallax-container">
-    			<div class="parallax"><img src="../../static/padmex/img/fondo1.jpg"></div>
-    		</div>
-    		<div class="section tranparent">
-				<div class="row">
-					<div class="container col m4 s12">
-						<p class="cuadro">En el año de 1961, fue fundada la empresa con capital en su totalidad mexicano actualmente la razon social es Piscinas PadMex. El Arte </p>
-					</div>
-					<div class="container col m8 s12">
-						<p class="cuadro">Se ha dedicado al diseño, construcción, y suministro  de  equipo para Albercas Olímpicas, SemiOlímpicas y de uso particular en condominios, residencias, clubes Deportivos, Gobierno. Distribuimos equipos de las firmas mas importes de Europa y América garantizando equipos de alta tecnologia contando  con  una linea  extensa de productos.</p>
-					</div>
+			<div class="row">
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/fondo1.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p2.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p3.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p4.jpg">
 				</div>
 			</div>
-    		<div id="nosotros" class="parallax-container">
-    			<div class="parallax"><img src="../../static/padmex/img/p3.jpg"></div>
-    		</div>
-    		<div class="section tranparent">
-				<div class="row">
+			<div class="row">
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p5.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p6.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p7.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p8.jpg">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p9.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p1.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p16.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p11.jpg">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p12.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p13.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p14.jpg">
+				</div>
+				<div class="col s6 m3">
+					<img class="materialboxed" width="100%" height="100" src="../../static/padmex/img/p15.jpg">
 				</div>
 			</div>
 		</div>
 
 	</main>
-
-<footer class="azul">
+ <footer class="azul">
           <div class="container">
             <div class="row">
               <div class="col m3 s12">
@@ -263,5 +294,4 @@ main {
 <script type="text/javascript" src="../../static/padmex/js/jquery.js"></script>
 <script type="text/javascript" src="../../static/padmex/js/materialize.min.js"></script>
 <script type="text/javascript" src="../../static/padmex/js/app.js"></script>
-
 </html>

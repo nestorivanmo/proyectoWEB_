@@ -15,5 +15,9 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('comprar', views.VerCompras.as_view(), name="compras"),
     path('entrar', views.VerControladorLogin.as_view(), name="controlador"),
+    path('carrito', views.VerCarrito.as_view(), name="carrito"),
+    path('ubicaciones', views.VerUbicaciones.as_view(), name="ubicaciones"),
+    path('contactanos', views.VerContacto.as_view(), name="contactanos"),
+    path('galeria', views.VerGaleria.as_view(), name="galeria"),
     #path(r'productos/add/$', views.UserCreate.as_view(), name='cliente-add'),
 ]

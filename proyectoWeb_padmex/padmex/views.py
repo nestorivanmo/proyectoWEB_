@@ -13,16 +13,33 @@ class VerOlimpicas(generic.ListView):
     model = Detalle
     template_name = 'padmex/olimpicas.html'
 
+class VerUbicaciones(generic.ListView):
+    model = Detalle
+    template_name = 'padmex/ubicaciones.html'
+
+class VerContacto(generic.ListView):
+    model = Detalle
+    template_name = 'padmex/contactanos.html'
+
+class VerGaleria(generic.ListView):
+    model = Detalle
+    template_name = 'padmex/galeria.html'
+
 class VerResidenciales(generic.ListView):
     template_name = 'padmex/residenciales.html'
     def get_queryset(self):
         return Detalle.objects.all()
 
 class VerCompras(generic.ListView):
-
     template_name = 'padmex/compras.html'
     def get_queryset(self):
         return Detalle.objects.all()
+
+class VerCarrito(generic.ListView):
+    template_name = 'padmex/carrito.html'
+    def get_queryset(self):
+        return Detalle.objects.all()
+
 class VerNosotros(generic.ListView):
     template_name = 'padmex/nosotros.html'
     def get_queryset(self):

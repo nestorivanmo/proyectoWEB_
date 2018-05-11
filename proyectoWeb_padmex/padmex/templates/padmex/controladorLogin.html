@@ -1,11 +1,258 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="utf-8">
+	<title>PadMex | Carrito</title>
+
+    <link  rel="stylesheet" type="text/css" href="{% static 'padmex/css/style.css' %}"/>
+    <link rel="icon" type="text/css" href="{% static 'padmex/img/padmex_logo.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'padmex/css/materialize.min.css' %}"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Questrial" rel="stylesheet">
+
+ <style>
+    /*------------------------------------------------------------
+--------------------------->ESTILOS<--------------------------
+------------------------------------------------------------*/
+body {
+/* Ubicación de la imagen */
+/*background-image: url(../img/fondo1.jpg);*/
+/* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+background-position: center center;
+/* Para que la imagen de fondo no se repita */
+background-repeat: no-repeat;
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+background-attachment: fixed;
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+background-size: cover;
+/* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+background-color: white;
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+}
+div {
+	text-align: justify;
+}
+h3, h4, h5, h6 {
+	text-align: center;
+	font-family: 'Fjalla One', sans-serif;
+}
+p {
+	text-align: justify;
+	font-family: 'Questrial', sans-serif;
+}
+div ul li {
+	display: inline;
+}
+main {
+    flex: 1 0 auto;
+}
+
+/*------------------------------------------------------------
+--------------------------->CLASES<---------------------------
+------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+----------------------------FUENTES---------------------------
+------------------------------------------------------------*/
+.fjo{
+	font-family: 'Fjalla One', sans-serif;
+}
+.lob, .card-title{
+	font-family: 'Lobster', cursive;
+}
+.qu{
+	font-family: 'Questrial', sans-serif;
+}
+
+/*------------------------------------------------------------
+----------------------------COLORES---------------------------
+------------------------------------------------------------*/
+.negro {
+	color: white !important;
+	background-color:rgba(0,0,0,0.7);
+	/*border-radius: 10px;*/
+}
+.azul {
+	color: white !important;
+	background-color:rgba(32,48,64,0.5); /*#203040*/
+}
+.sombraAzul {
+	color: white !important;
+	background-color:rgba(32,48,64,0.5); /*#203040*/
+}
+.blanco {
+	color: black !important;
+	background-color:rgba(255,255,255,0.7);
+}
+.amarillo {
+	color: black !important;
+	background-color:rgba(222,180,0,0.7); /*#DEB400*/
+	border-radius: 10px;
+}
+
+.lb {
+	color: white !important;
+}
+
+.ln {
+	color: black !important;
+}
+
+/*------------------------------------------------------------
+------------------------FORMAS Y TAMAÑOS----------------------
+------------------------------------------------------------*/
+.cuadro {
+	margin: 10px;
+	padding: 20px;
+	/*border-radius: 10px;*/
+}
+.cuadro2 {
+	margin: 10px;
+	padding: 20px;
+	border-radius: 10px;
+}
+.logo {
+	height: 50px;
+	margin: 7px;
+}
+.navInicio {
+	background: transparent !important;
+}
+.carrito {
+	margin-top: 20px;
+}
+.boton {
+	color: white;
+	padding: 12px;
+	margin: 12px;
+	width: 190px;
+	height: 40px;
+	text-align: center;
+	border-radius: 10px;
+	font-family: 'Lobster', cursive;
+}
+.dd {
+	background-color: white;/*#476D93;*/
+}
+.parallax-container {
+	height: 200px;
+}
+</style>
+
 </head>
-<body>
-    <p><a href="{% url 'login' %}">Login</a></p>
-    <p><a href="{% url 'register' %}">Registrarte</a></p>
-</body>
-</html>
+<body background="../../static/padmex/img/fondo8.jpg">
+
+	<div class="navbar-fixed">
+	<nav class="azul">
+
+		<div class="row">
+			<div class="col m4 s12">
+				<a href="{% url 'padmex:index' %}" class="brand-logo"><img class="logo" src="../../static/padmex/img/padmex_logo.png"></a>
+			</div>
+			<div class="col m4 s12">
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+	    			<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
+	    			<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
+	    			<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
+	    		</ul>
+			</div>
+			<div class="col m4 s12">
+				<ul class="right hide-on-med-and-down">
+	    			<li><a href="#">Sing In/Up</a></li>
+	    			<li><a class="negro" href="{% url 'padmex:carrito' %}"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"></a></li>
+					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
+	    		</ul>
+			</div>
+		</div>
+	</nav>
+	</div>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
+		<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
+		<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
+		<li class="divider"></li>
+		<li><a href="#">Sing In/Up</a></li>
+		<li><a href="{% url 'padmex:carrito' %}">Carrito</a></li>
+		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
+	</ul>
+
+	<ul id="dropdown1" class="dropdown-content dd">
+		<li><a class="ln" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
+		<li><a class="ln" href="{% url 'padmex:contactanos' %}">Contacto</a></li>
+		<li><a class="ln" href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
+	</ul>
+
+	<ul id="dropdown2" class="dropdown-content">
+		<li><a class="ln" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
+		<li><a class="ln" href="{% url 'padmex:contactanos' %}">Contacto</a></li>
+		<li><a class="ln" href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
+	</ul>
+
+	<main>
+
+		<div class="container">
+			<div class="row">
+				<div class="col m4 s12 offset-m4 cuadro azul">
+					<h6>Necesita iniciar sesión para poder comprar</h6>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col m4 s12 offset-m4">
+					<center>
+
+                        <p class="boton negro"><a class="lb" href="#"><a href="{% url 'login' %}">Iniciar sesion</a></p>
+					</center>
+
+				</div>
+				<div class="col m4 s12 offset-m4">
+					<center>
+                        <p class="boton negro"><a class="lb" href="#"><a href="{% url 'register' %}">¿No tienes cuenta?</a></p>
+					</center>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+<footer class="azul">
+          <div class="container">
+            <div class="row">
+              <div class="col m3 s12">
+              	<center><img class="logo" src="../../static/padmex/img/padmex_logo.png"></center>
+                <h6 class="white-text">Piscinas PadMex, S.A. de C.V.</h6>
+              </div>
+            	<div class="col m7 offset-m1 s12">
+	                <p class="grey-text text-lighten-4"><strong class="lb fjo">Dirección: </strong>Av. Universidad No. 1344, Col. del Carmen. Coyoacán, D.F. C.P. 04100</p>
+	                <div class="row">
+	                	<div class="col m2 s12">
+	                		<p class="grey-text text-lighten-4"><strong class="lb fjo">Teléfonos: </strong></p>
+	                	</div>
+	                	<div class="col m3 s12">
+	                		<p class="grey-text text-lighten-4">01(55) 5604 7468</p>
+	                	</div>
+	                	<div class="col m4 s12">
+	                		<p class="grey-text text-lighten-4">01(55) 5604 7455</p>
+	                	</div>
+	                	<div class="col m1 s12">
+	                		<a class="grey-text text-lighten-3" href="https://www.facebook.com/Piscinas-Padmex-SA-de-CV-939212429443583/"><img src="../../static/padmex/img/fb-logo.png"></a>
+	                	</div>
+	                	<div class="col m1 s12">
+	                		<a class="grey-text text-lighten-3" href="https://twitter.com/PiscinasPadMex"><img src="../../static/padmex/img/t-logo.png"></a>
+	                	</div>
+	                </div>
+              	</div>
+            </div>
+          </div>
+      </footer>
+
+	</body>
+	<script type="text/javascript" src="../../static/padmex/js/jquery.js"></script>
+<script type="text/javascript" src="../../static/padmex/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../static/padmex/js/app.js"></script>
+
+	</html>
