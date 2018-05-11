@@ -115,10 +115,11 @@ p {
 .dd {
 	background-color: white;/*#476D93;*/	
 }
-.parallax-container {
+#nosotros {
 	height: 200px;
 }
 .img{
+
 	width: 720px;
 	height: 480px;
 }
