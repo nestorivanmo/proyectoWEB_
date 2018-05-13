@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -24,7 +25,7 @@ class Producto(models.Model):
         return self.nombreProd + ' - ' + self.precio
 
 class Pedido(models.Model):
-    cliente_FK = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    cliente_FK = models.ForeignKey(User, on_delete=models.CASCADE)
     fecha = models.DateTimeField(
         default = timezone.now
     )
@@ -40,10 +41,11 @@ class Detalle(models.Model):
         return  self.producto_FK.nombreProd + ' - ' + self.cantidad
 
 class Cita(models.Model):
-    cliente_FK = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    cliente_FK = models.ForeignKey(User, on_delete=models.CASCADE)
+    contenido = models.TextField(default=" ")
     fecha = models.DateTimeField(
         default=timezone.now
     )
     status = models.CharField(max_length=20, default="Por atender")
     def __str__(self):
-        return self.cliente_FK + ' - ' + self.fecha + ' - ' + self.status
+        return self.contenido

@@ -1,4 +1,7 @@
 from django import forms
 from . import models
 
-class ComprarProducto(forms.ModelForm):
+class AgendarCita(forms.ModelForm):
+    class Meta:
+        model = models.Cita
+        fields = ['contenido','fecha']

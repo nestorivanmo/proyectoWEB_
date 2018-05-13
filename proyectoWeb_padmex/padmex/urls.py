@@ -19,5 +19,6 @@ urlpatterns = [
     path('ubicaciones', views.VerUbicaciones.as_view(), name="ubicaciones"),
     path('contactanos', views.VerContacto.as_view(), name="contactanos"),
     path('galeria', views.VerGaleria.as_view(), name="galeria"),
+    path('citas', views.AgendarCita, name="citas"),
     #path(r'productos/add/$', views.UserCreate.as_view(), name='cliente-add'),
 ]
