@@ -16,12 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 
-from accounts.views import (login_view, register_view, logout_view)
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('padmex.urls')),
-    re_path(r'^login/', login_view, name='login'),
-    re_path(r'^logout/', login_view, name='logout'),
-    re_path(r'^register/', register_view, name='register'),
+    path('accounts/', include('accounts.urls'))
 ]

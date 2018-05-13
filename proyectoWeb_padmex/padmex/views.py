@@ -1,6 +1,7 @@
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Detalle, Cliente, Producto
+from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
 
@@ -30,10 +31,9 @@ class VerResidenciales(generic.ListView):
     def get_queryset(self):
         return Detalle.objects.all()
 
-class VerCompras(generic.ListView):
-    template_name = 'padmex/compras.html'
-    def get_queryset(self):
-        return Detalle.objects.all()
+@login_required(login_url="/accounts/login")
+def VerCompras(request):
+    return render(request, 'padmex/compras.html')
 
 class VerCarrito(generic.ListView):
     template_name = 'padmex/carrito.html'

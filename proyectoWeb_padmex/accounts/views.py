@@ -1,45 +1,40 @@
-from django.contrib.auth import (
-    authenticate,
-    get_user_model,
-    login,
-    logout,
-)
 from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout
 
-from .forms import UserLoginForm, UserRegistrationForm
 
-# Create your views here.
+# Create your views here -> VA!
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()  # create a new user for us
+            # log the user in
+            login(request, user)
+            return redirect('padmex:index')
+    else:
+        form = UserCreationForm()
+    return render(request, 'accounts/signup.html', {'form': form})
+
 
 def login_view(request):
-    title = "Login"
-    username1 = ""
-    form = UserLoginForm(request.POST or None)
-    if form.is_valid():
-        username1 = form.cleaned_data.get("username")
-        password = form.cleaned_data.get('password')
-        user = authenticate(username=username1, password=password)
-        login(request, user)
-        return redirect("padmex:carrito")
-    return render(request, "form.html", {"form": form, "title": title, "username":username1})
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            # log the user in
+            user = form.get_user()
+            login(request, user)
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect('padmex:index')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'accounts/login.html', {'form': form})
 
-def register_view(request):
-    title = "Register"
-    form = UserRegistrationForm(request.POST or None)
-    if form.is_valid():
-        user = form.save(commit=False)
-        password = form.cleaned_data.get('password')
-        user.set_password(password)
-        user.save()
-        new_user = authenticate(username=user.username, password=password)
-        login(request, new_user)
-        return redirect("padmex:carrito")
-    context = {
-        "form": form,
-        "title": title
-    }
-    return render(request, "form.html", context)
 
 def logout_view(request):
-    logout(request)
-    return redirect("/")
-    return render(request, "form.html", {})
+    if request.method == 'POST':
+        logout(request)
+        return redirect('padmex:index')
