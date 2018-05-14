@@ -22,6 +22,6 @@ urlpatterns = [
     path('contactanos', views.VerContacto.as_view(), name="contactanos"),
     path('galeria', views.VerGaleria.as_view(), name="galeria"),
     path('citas', views.AgendarCita, name="citas"),
-    path('exito', views.Exito, name="exito"),
+    path('exito', views.Exito.as_view(), name="exito"),
     #path(r'productos/add/$', views.UserCreate.as_view(), name='cliente-add'),
 ]

@@ -1,6 +1,6 @@
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Detalle, Cliente, Producto
+from .models import Detalle, Cliente, Producto, Cita
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -39,8 +39,11 @@ class VerResidenciales(generic.ListView):
 def VerCompras(request):
     return render(request, 'padmex/compras.html')
 
-def Exito(request):
-    return render(request, 'padmex/exito.html')
+class Exito(generic.ListView):
+    template_name = 'padmex/exito.html'
+    def get_queryset(self):
+        return Cita.objects.all()
+
 
 @login_required(login_url="/accounts/login")
 def AgendarCita(request):

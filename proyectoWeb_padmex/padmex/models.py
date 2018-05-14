@@ -20,9 +20,10 @@ class Producto(models.Model):
     nombreProd = models.CharField(max_length=200)
     descripcionProd = models.CharField(max_length=2000)
     precio = models.CharField(max_length=20)
+    categoria = models.CharField(max_length=20, default="")
     imagen = models.CharField(max_length=200, default="")
     def __str__(self):
-        return self.nombreProd + ' - ' + self.precio
+        return self.nombreProd + ' - ' + self.precio + ' - ' + self.categoria
 
 
 
@@ -46,7 +47,7 @@ class Cita(models.Model):
     cliente_FK = models.ForeignKey(User, on_delete=models.CASCADE)
     asunto = models.CharField(max_length=30, default=" ")
     contenido = models.TextField(default=" ")
-    telefono = models.CharField(max_length=30,default= "")
+    teléfono = models.CharField(max_length=30,default= "")
     correo = models.EmailField(default="")
     fecha = models.DateTimeField(
         default=timezone.now

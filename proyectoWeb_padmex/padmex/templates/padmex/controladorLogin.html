@@ -140,6 +140,24 @@ main {
 .parallax-container {
 	height: 200px;
 }
+li:hover form button{
+    background-color:rgba(0,0,0,0.075);
+}
+.navbtn{
+    background: transparent;
+    color: white;
+    height: 65px;
+    width: 80px;
+    padding: 0% 0% 0% 0%;
+    border: 0px;
+    margin: 0px;
+}
+.navbtnM{
+    background: transparent;
+    padding: 17px 230px 17px 32px;
+    border: 0px;
+    margin: 0px;
+}
 </style>
 
 </head>
@@ -149,21 +167,33 @@ main {
 	<nav class="azul">
 
 		<div class="row">
-			<div class="col m4 s12">
-				<a href="{% url 'padmex:index' %}" class="brand-logo"><img class="logo" src="../../static/padmex/img/padmex_logo.png"></a>
+			<div class="col m2 s12">
+				<a href="{% url 'padmex:index' %}" class="brand-logo"><img class="logo" src="{% static 'padmex/img/padmex_logo.png' %}"></a>
 			</div>
-			<div class="col m4 s12">
+			<div class="col m5 s12">
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
-	    			<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
-	    			<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
+	    			<li><a href="{% url 'padmex:olimpicas' %}">Albercas Olímpicas</a></li>
+	    			<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
 	    			<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 	    		</ul>
 			</div>
-			<div class="col m4 s12">
+			<div class="col m5 s12">
 				<ul class="right hide-on-med-and-down">
-	    			<li><a class="negro" href="#">Sign In/Up</a></li>
-	    			<li><a href="{% url 'padmex:carrito' %}"><img class="carrito" src="../../static/padmex/img/carritoComprasB.png"></a></li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                            {% csrf_token %}
+                                <button class="navbtn" type="submit">Logout</button>
+                        </form>
+                    </li>
+                        <li><a href="{% url 'padmex:citas' %}">Agendar cita</a></li>
+                    <li><a href="carrito/{{ user.id }}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
+                    {% else %}
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
+                        <li><a href="{% url 'accounts:login' %}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
+                    {% endif %}
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
 			</div>
@@ -172,16 +202,28 @@ main {
 	</div>
 
 	<ul class="sidenav" id="mobile-demo">
-		<li><a href="{% url 'padmex:olimpicas' %}">Alberca Olímpica</a></li>
-		<li><a href="{% url 'padmex:residenciales' %}">Alberca Residencial</a></li>
+		<li><a href="{% url 'padmex:olimpicas' %}">Albercas Olímpicas</a></li>
+		<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
 		<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 		<li class="divider"></li>
-		<li><a href="#">Sing In/Up</a></li>
-		<li><a href="{% url 'padmex:carrito' %}">Carrito</a></li>
+		{% if user.is_authenticated %}
+                    <li>
+                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                            {% csrf_token %}
+                                <button class="navbtnM" type="submit"><strong>Logout</strong></button>
+                        </form>
+                    </li>
+                        <li><a href="{% url 'padmex:citas' %}">Agendar cita</a></li>
+                    <li><a href="carrito/{{ user.id }}">Carrito</a></li>
+                    {% else %}
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown4">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
+                        <li><a href="{% url 'accounts:login' %}">Carrito</a></li>
+                    {% endif %}
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
 
-	<ul id="dropdown1" class="dropdown-content dd">
+	<ul id="dropdown1" class="dropdown-content">
 		<li><a class="ln" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
 		<li><a class="ln" href="{% url 'padmex:contactanos' %}">Contacto</a></li>
 		<li><a class="ln" href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
@@ -191,6 +233,16 @@ main {
 		<li><a class="ln" href="{% url 'padmex:nosotros' %}">Nosotros</a></li>
 		<li><a class="ln" href="{% url 'padmex:contactanos' %}">Contacto</a></li>
 		<li><a class="ln" href="{% url 'padmex:ubicaciones' %}">Ubicaciones</a></li>
+	</ul>
+
+    <ul id="dropdown3" class="dropdown-content">
+		<li><a class="ln" href="{% url 'accounts:login' %}">Entrar</a></li>
+		<li><a class="ln" href="{% url 'accounts:signup' %}">Registrarse</a></li>
+	</ul>
+
+    <ul id="dropdown4" class="dropdown-content">
+		<li><a class="ln" href="{% url 'accounts:login' %}">Entrar</a></li>
+		<li><a class="ln" href="{% url 'accounts:signup' %}">Registrarse</a></li>
 	</ul>
 
 	<main>
