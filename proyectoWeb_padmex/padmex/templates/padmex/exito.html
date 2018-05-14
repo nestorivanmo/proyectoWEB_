@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>PadMex | Productos</title>
+	<title>PadMex | Citas</title>
 	<link  rel="stylesheet" type="text/css" href="{% static 'padmex/css/style.css' %}"/>
     <link rel="icon" type="text/css" href="{% static 'padmex/img/padmex_logo.png' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'padmex/css/materialize.min.css' %}"/>
@@ -34,9 +34,12 @@ flex-direction: column;
 div {
 	text-align: justify;
 }
-h3, h4, h5, h6 {
+h3, h4 {
 	text-align: center;
 	font-family: 'Fjalla One', sans-serif;
+}
+h5, h6 {
+    text-align: left;
 }
 p {
 	text-align: justify;
@@ -143,6 +146,8 @@ main {
 .parallax-container {
 	height: 200px;
 }
+.dimension_c{
+}
 li:hover form button{
     background-color:rgba(0,0,0,0.075);
 }
@@ -190,7 +195,7 @@ li:hover form button{
                                 <button class="navbtn" type="submit">Logout</button>
                         </form>
                     </li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar cita</a></li>
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown5">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a href="carrito/{{ user.id }}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
                     {% else %}
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -248,16 +253,49 @@ li:hover form button{
 		<li><a class="ln" href="{% url 'accounts:signup' %}">Registrarse</a></li>
 	</ul>
 
+    <ul id="dropdown5" class="dropdown-content">
+		<li><a class="ln" href="{% url 'accounts:login' %}">Agendar</a></li>
+		<li><a class="ln" href="{% url 'accounts:signup' %}">Historial</a></li>
+	</ul>
+
     <main>
         <div class="row">
-
-                {% for citas in object_list %}
-                    {% if citas.cliente_FK.pk == user.pk %}
-                        <h2>{{ citas.asunto }}</h2>
-                    {% endif %}
-                {% endfor %}
-
-        </div>
+            <div class="">
+                <div class="row">
+				    <div class="col s12 cuadro negro">
+					    <h4 class="fjo">Historial de citas</h4>
+				    </div>
+			    </div>
+            </div>
+                    <div class="carousel dimension_c">
+                        {% for citas in object_list %}
+                            {% if citas.cliente_FK.pk == user.pk %}
+                                <a class="carousel-item">
+                                    <div class="col s12 blanco">
+                                        <p><strong class="fjo">Asunto: </strong> {{ citas.asunto }}</p>
+                                        <p><strong class="fjo">Mensaje: </strong> {{ citas.contenido }}</p>
+                                        <div class="divider"></div>
+                                        <p><strong class="fjo">Fecha: </strong> {{ citas.fecha }}</p>
+                                        <p><strong class="fjo">Estado: </strong> {{ citas.status }}</p>
+                                    </div>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                        {% for citas in object_list %}
+                            {% if citas.cliente_FK.pk == user.pk %}
+                                <a class="carousel-item">
+                                    <div class="col s12 blanco">
+                                        <p><strong class="fjo">Asunto: </strong> {{ citas.asunto }}</p>
+                                        <p><strong class="fjo">Mensaje: </strong> {{ citas.contenido }}</p>
+                                        <div class="divider"></div>
+                                        <p><strong class="fjo">Fecha: </strong> {{ citas.fecha }}</p>
+                                        <p><strong class="fjo">Estado: </strong> {{ citas.status }}</p>
+                                    </div>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+            </div>
 
     </main>
 

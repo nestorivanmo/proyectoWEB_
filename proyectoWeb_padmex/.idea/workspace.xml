@@ -29,7 +29,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/padmex/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
+            <state relative-caret-position="731">
               <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -41,8 +41,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/padmex/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+            <state relative-caret-position="204">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -53,7 +53,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/padmex/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
+            <state relative-caret-position="374">
               <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -65,7 +65,7 @@
       <file leaf-file-name="productos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/productos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="4437">
               <caret line="261" column="38" selection-start-line="261" selection-start-column="27" selection-end-line="261" selection-end-column="38" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
@@ -88,17 +88,8 @@
       <file leaf-file-name="contactanos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/contactanos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-700">
-              <caret line="222" selection-start-line="222" selection-end-line="222" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="galeria.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/galeria.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="256" column="102" selection-start-line="256" selection-start-column="78" selection-end-line="256" selection-end-column="102" />
+            <state relative-caret-position="152">
+              <caret line="247" column="13" selection-start-line="247" selection-start-column="13" selection-end-line="247" selection-end-column="13" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -115,8 +106,21 @@
       <file leaf-file-name="exito.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/exito.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="257" column="28" selection-start-line="257" selection-start-column="28" selection-end-line="257" selection-end-column="28" />
+            <state relative-caret-position="293">
+              <caret line="286" column="39" lean-forward="true" selection-start-line="286" selection-start-column="39" selection-end-line="286" selection-end-column="39" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#if#1;n#!!top" />
+                <element signature="n#li#4;n#ul#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#form#0;n#li#4;n#ul#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#5;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,7 +195,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,6 +242,14 @@
               <item name="proyectoWeb_padmex" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyectoWeb_padmex" type="462c0819:PsiDirectoryNode" />
               <item name="padmex" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="padmex" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyectoWeb_padmex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyectoWeb_padmex" type="462c0819:PsiDirectoryNode" />
+              <item name="padmex" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -262,6 +273,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,7 +340,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -336,48 +348,26 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.13474026" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13354531" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32954547" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2677761" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2672035" />
+      <window_info anchor="right" id="R Packages" order="2" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="0" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="SciView" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="12" weight="0.32954547" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2677761" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33441558" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32954547" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="12" weight="0.32954547" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -391,6 +381,79 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/productos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4437">
+          <caret line="261" column="38" selection-start-line="261" selection-start-column="27" selection-end-line="261" selection-end-column="38" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#span#0;n#div#1;n#li#1;n#ul#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#span#0;n#div#1;n#li#2;n#ul#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#span#0;n#div#1;n#li#3;n#ul#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/contactanos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3774">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/galeria.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4352">
+          <caret line="256" column="102" selection-start-line="256" selection-start-column="78" selection-end-line="256" selection-end-column="102" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/exito.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4369">
+          <caret line="257" column="28" selection-start-line="257" selection-start-column="28" selection-end-line="257" selection-end-column="28" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#if#1;n#!!top" />
+            <element signature="n#li#4;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#form#0;n#li#4;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#5;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/compras.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -526,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/static/padmex/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/producto_form.html" />
     <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/registrationForm.html" />
     <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/index.html">
@@ -542,13 +598,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/urls/resolvers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="544" selection-start-line="544" selection-end-line="544" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/urls/resolvers.py" />
     <entry file="file://$PROJECT_DIR$/proyectoWeb_padmex/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -575,9 +625,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/accounts/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -610,24 +657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/detalles.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/form-template.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
           <caret line="243" selection-start-line="243" selection-end-line="243" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,14 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
           <caret line="245" column="9" selection-start-line="245" selection-start-column="9" selection-end-line="245" selection-end-column="9" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,13 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="224" column="47" selection-start-line="224" selection-start-column="47" selection-end-line="224" selection-end-column="47" />
-          <folding>
-            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -678,15 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="223" lean-forward="true" selection-start-line="223" selection-end-line="223" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -694,44 +703,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="253" column="31" selection-start-line="253" selection-start-column="31" selection-end-line="253" selection-end-column="31" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/galeria.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="256" column="102" selection-start-line="256" selection-start-column="78" selection-end-line="256" selection-end-column="102" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/contactanos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-700">
-          <caret line="222" selection-start-line="222" selection-end-line="222" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/static/padmex/img/ab-techumbre.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/olimpicas.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -749,7 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/productos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="4437">
           <caret line="261" column="38" selection-start-line="261" selection-start-column="27" selection-end-line="261" selection-end-column="38" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
@@ -770,7 +743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/padmex/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="374">
           <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -778,22 +751,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/views.py">
+    <entry file="file://$PROJECT_DIR$/padmex/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        <state relative-caret-position="731">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/padmex/models.py">
+    <entry file="file://$PROJECT_DIR$/padmex/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+        <state relative-caret-position="204">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -808,10 +781,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/galeria.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="256" column="102" selection-start-line="256" selection-start-column="78" selection-end-line="256" selection-end-column="102" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/padmex/static/padmex/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/contactanos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="247" column="13" selection-start-line="247" selection-start-column="13" selection-end-line="247" selection-end-column="13" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/padmex/templates/padmex/exito.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="257" column="28" selection-start-line="257" selection-start-column="28" selection-end-line="257" selection-end-column="28" />
+        <state relative-caret-position="293">
+          <caret line="286" column="39" lean-forward="true" selection-start-line="286" selection-start-column="39" selection-end-line="286" selection-end-column="39" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#if#1;n#!!top" />
+            <element signature="n#li#4;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#form#0;n#li#4;n#ul#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#5;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
