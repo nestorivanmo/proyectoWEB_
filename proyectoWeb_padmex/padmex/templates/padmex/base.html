@@ -146,34 +146,35 @@ main {
 	<nav class="navInicio">
 
 		<div class="row">
-			<div class="col m4 s12">
+			<div class="col m3 s12">
 				<a href="{% url 'padmex:index' %}" class="brand-logo"><img class="logo" src="{% static 'padmex/img/padmex_logo.png' %}"></a>
 			</div>
 			<div class="col m4 s12">
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-				<ul class="right hide-on-med-and-down">
+				<ul class="left hide-on-med-and-down">
 	    			<li><a href="{% url 'padmex:olimpicas' %}">Albercas Olímpicas</a></li>
 	    			<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
 	    			<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 	    		</ul>
 			</div>
-			<div class="col m4 s12">
+			<div class="col m5 s12">
 				<ul class="right hide-on-med-and-down">
                     {% if user.is_authenticated %}
                     <li>
                         <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
                             {% csrf_token %}
-                            <button type="submit">Logout</button>
+                            <button class="negro" type="submit">Logout</button>
                         </form>
                     </li>
                         <li><a href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
+                    <li><a href="carrito/{{ user.id }}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
                     {% else %}
+                        <li><a href="{% url 'accounts:login' %}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
                         <li><a href="{% url 'accounts:login' %}">Login</a></li>
                         <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
                         <li><a href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
                     {% endif %}
 	    			<li><a href="{% url 'padmex:controlador' %}">Sign In/Up</a></li>
-	    			<li><a href="{% url 'padmex:carrito' %}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
 			</div>

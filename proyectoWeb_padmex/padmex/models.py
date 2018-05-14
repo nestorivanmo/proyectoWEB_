@@ -24,6 +24,8 @@ class Producto(models.Model):
     def __str__(self):
         return self.nombreProd + ' - ' + self.precio
 
+
+
 class Pedido(models.Model):
     cliente_FK = models.ForeignKey(User, on_delete=models.CASCADE)
     fecha = models.DateTimeField(
@@ -42,10 +44,13 @@ class Detalle(models.Model):
 
 class Cita(models.Model):
     cliente_FK = models.ForeignKey(User, on_delete=models.CASCADE)
+    asunto = models.CharField(max_length=30, default=" ")
     contenido = models.TextField(default=" ")
+    telefono = models.CharField(max_length=30,default= "")
+    correo = models.EmailField(default="")
     fecha = models.DateTimeField(
         default=timezone.now
     )
     status = models.CharField(max_length=20, default="Por atender")
     def __str__(self):
-        return self.contenido
+        return self.asunto + ' - cliente: ' + self.cliente_FK.username + ' - ' + self.cliente_FK.email

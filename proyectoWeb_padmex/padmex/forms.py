@@ -4,4 +4,4 @@ from . import models
 class AgendarCita(forms.ModelForm):
     class Meta:
         model = models.Cita
-        fields = ['contenido','fecha']
+        fields = ['asunto','contenido','telefono', 'correo']
