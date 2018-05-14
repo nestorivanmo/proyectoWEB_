@@ -187,13 +187,11 @@ li:hover form button{
                                 <button class="navbtn" type="submit">Logout</button>
                         </form>
                     </li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar cita</a></li>
-                    <li><a href="carrito/{{ user.id }}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
-                    {% else %}
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown5">Citas<i class="material-icons right">arrow_drop_down</i></a></li>>
+                     {% else %}
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
-                        <li><a href="{% url 'accounts:login' %}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
-                    {% endif %}
+                        <li><a href="{% url 'accounts:login' %}">Agendar una cita</a></li>
+                         {% endif %}
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
 			</div>
@@ -213,13 +211,11 @@ li:hover form button{
                                 <button class="navbtnM" type="submit"><strong>Logout</strong></button>
                         </form>
                     </li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar cita</a></li>
-                    <li><a href="carrito/{{ user.id }}">Carrito</a></li>
-                    {% else %}
+                        li><a class="dropdown-trigger" href="#!" data-target="dropdown6">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
+                     {% else %}
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown4">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
-                        <li><a href="{% url 'accounts:login' %}">Carrito</a></li>
-                    {% endif %}
+                        <li><a href="{% url 'accounts:login' %}">Agendar una cita</a></li>
+                        {% endif %}
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
 
@@ -245,6 +241,16 @@ li:hover form button{
 		<li><a class="ln" href="{% url 'accounts:signup' %}">Registrarse</a></li>
 	</ul>
 
+    <ul id="dropdown5" class="dropdown-content">
+		<li><a class="ln" href="{% url 'padmex:citas' %}">Agendar</a></li>
+		<li><a class="ln" href="{% url 'padmex:exito' %}">Historial</a></li>
+	</ul>
+
+    <ul id="dropdown6" class="dropdown-content">
+		<li><a class="ln" href="{% url 'padmex:citas' %}">Agendar</a></li>
+		<li><a class="ln" href="{% url 'padmex:exito' %}">Historial</a></li>
+	</ul>
+
 		<main>
 
 
@@ -259,38 +265,18 @@ li:hover form button{
 						<ul class="slides">
 							<li>
 								<img src="../../static/padmex/img/AO/img1.jpg">
-								<div class="caption center-align">
-									<h3>This is our big Tagline!</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-								</div>
 							</li>
 							<li>
 								<img src="../../static/padmex/img/AO/img7.jpg">
-								<div class="caption left-align">
-									<h3>Left Aligned Caption</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-								</div>
 							</li>
 							<li>
 								<img src="../../static/padmex/img/AO/img3.jpg">
-								<div class="caption right-align">
-									<h3>Right Aligned Caption</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-								</div>
 							</li>
 							<li>
 								<img src="../../static/padmex/img/AO/img4.jpg">
-								<div class="caption right-align">
-									<h3>Right Aligned Caption</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-								</div>
 							</li>
 							<li>
 								<img src="../../static/padmex/img/AO/img5.jpg">
-								<div class="caption center-align">
-									<h3>This is our big Tagline!</h3>
-									<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-								</div>
 							</li>
 						</ul>
 					</div>

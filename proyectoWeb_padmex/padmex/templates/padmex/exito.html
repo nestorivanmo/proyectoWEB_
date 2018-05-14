@@ -183,24 +183,22 @@ li:hover form button{
 				<ul class="right hide-on-med-and-down">
 	    			<li><a href="{% url 'padmex:olimpicas' %}">Albercas Olímpicas</a></li>
 	    			<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
-	    			<li><a class="negro" href="{% url 'padmex:productos' %}">Productos</a></li>
+	    			<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 	    		</ul>
 			</div>
 			<div class="col m5 s12">
 				<ul class="right hide-on-med-and-down">
                     {% if user.is_authenticated %}
-                    <li>
-                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
-                            {% csrf_token %}
-                                <button class="navbtn" type="submit">Logout</button>
-                        </form>
-                    </li>
-                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown5">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a href="carrito/{{ user.id }}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
+	                    <li>
+	                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+	                            {% csrf_token %}
+	                                <button class="navbtn" type="submit">Logout</button>
+	                        </form>
+	                    </li>
+	                    <li><a class="dropdown-trigger negro" href="#!" data-target="dropdown5">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
                     {% else %}
-                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
-                        <li><a href="{% url 'accounts:login' %}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
+                    	<li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="{% url 'accounts:login' %}">Agendar una cita</a></li>
                     {% endif %}
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
@@ -212,7 +210,7 @@ li:hover form button{
 	<ul class="sidenav" id="mobile-demo">
 		<li><a href="{% url 'padmex:olimpicas' %}">Albercas Olímpicas</a></li>
 		<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
-		<li><a class="negro" href="{% url 'padmex:productos' %}">Productos</a></li>
+		<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 		<li class="divider"></li>
 		{% if user.is_authenticated %}
                     <li>
@@ -221,12 +219,10 @@ li:hover form button{
                                 <button class="navbtnM" type="submit"><strong>Logout</strong></button>
                         </form>
                     </li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar cita</a></li>
-                    <li><a href="carrito/{{ user.id }}">Carrito</a></li>
+                        li><a class="dropdown-trigger negro" href="#!" data-target="dropdown6">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
                     {% else %}
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown4">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
-                        <li><a href="{% url 'accounts:login' %}">Carrito</a></li>
+                        <li><a href="{% url 'accounts:login' %}">Agendar una cita</a></li>
                     {% endif %}
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
@@ -254,8 +250,13 @@ li:hover form button{
 	</ul>
 
     <ul id="dropdown5" class="dropdown-content">
-		<li><a class="ln" href="{% url 'accounts:login' %}">Agendar</a></li>
-		<li><a class="ln" href="{% url 'accounts:signup' %}">Historial</a></li>
+		<li><a class="ln" href="{% url 'padmex:citas' %}">Agendar</a></li>
+		<li><a class="negro" href="{% url 'padmex:exito' %}">Historial</a></li>
+	</ul>
+
+    <ul id="dropdown6" class="dropdown-content">
+		<li><a class="ln" href="{% url 'padmex:citas' %}">Agendar</a></li>
+		<li><a class="negro" href="{% url 'padmex:exito' %}">Historial</a></li>
 	</ul>
 
     <main>

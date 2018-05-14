@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>PadMex</title>
+	<title>PadMex | Citas</title>
 
     <link  rel="stylesheet" type="text/css" href="{% static 'padmex/css/style.css' %}"/>
     <link rel="icon" type="text/css" href="{% static 'padmex/img/padmex_logo.png' %}">
@@ -186,12 +186,10 @@ li:hover form button{
                                 <button class="navbtn" type="submit">Logout</button>
                         </form>
                     </li>
-                        <li><a class="negro" href="{% url 'padmex:citas' %}">Agendar cita</a></li>
-                    <li><a href="carrito/{{ user.id }}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
+                    <li><a class="dropdown-trigger negro" href="#!" data-target="dropdown5">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
                     {% else %}
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li><a class="negro" href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
-                        <li><a href="{% url 'accounts:login' %}"><img class="carrito" src="{% static 'padmex/img/carritoComprasB.png' %}"></a></li>
+                        <li><a class="negro" href="{% url 'accounts:login' %}">Agendar una cita</a></li>
                     {% endif %}
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
@@ -212,13 +210,11 @@ li:hover form button{
                                 <button class="navbtnM" type="submit"><strong>Logout</strong></button>
                         </form>
                     </li>
-                        <li><a href="{% url 'padmex:citas' %}">Agendar cita</a></li>
-                    <li><a href="carrito/{{ user.id }}">Carrito</a></li>
+                        <li><a class="dropdown-trigger negro" href="#!" data-target="dropdown6">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
                     {% else %}
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown4">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li><a class="negro" href="{% url 'padmex:citas' %}">Agendar una cita</a></li>
-                        <li><a href="{% url 'accounts:login' %}">Carrito</a></li>
-                    {% endif %}
+                        <li><a class="negro" href="{% url 'accounts:login' %}">Agendar una cita</a></li>
+                        {% endif %}
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
 
@@ -242,6 +238,16 @@ li:hover form button{
     <ul id="dropdown4" class="dropdown-content">
 		<li><a class="ln" href="{% url 'accounts:login' %}">Entrar</a></li>
 		<li><a class="ln" href="{% url 'accounts:signup' %}">Registrarse</a></li>
+	</ul>
+
+    <ul id="dropdown5" class="dropdown-content">
+		<li><a class="negro" href="{% url 'padmex:citas' %}">Agendar</a></li>
+		<li><a class="ln" href="{% url 'padmex:exito' %}">Historial</a></li>
+	</ul>
+
+    <ul id="dropdown6" class="dropdown-content">
+		<li><a class="negro" href="{% url 'padmex:citas' %}">Agendar</a></li>
+		<li><a class="ln" href="{% url 'padmex:exito' %}">Historial</a></li>
 	</ul>
 
     <main>
