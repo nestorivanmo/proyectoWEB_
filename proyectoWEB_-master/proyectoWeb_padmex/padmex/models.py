@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 from django.contrib.auth.models import User
+from django import forms
+from django.contrib.admin import widgets
 
 # Create your models here.
 
@@ -45,10 +47,11 @@ class Detalle(models.Model):
 
 class Cita(models.Model):
     cliente_FK = models.ForeignKey(User, on_delete=models.CASCADE)
-    asunto = models.CharField(max_length=30, default=" ")
+    asunto = models.CharField(max_length=100, default=" ")
     contenido = models.TextField(default=" ")
     teléfono = models.CharField(max_length=30,default= "")
     correo = models.EmailField(default="")
+    fecha_cita = models.DateField(default=timezone.now)
     fecha = models.DateTimeField(
         default=timezone.now
     )

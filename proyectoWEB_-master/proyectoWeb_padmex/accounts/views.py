@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
+from django.core.mail import EmailMessage
+from . import forms
 
 
 # Create your views here -> VA!
@@ -38,3 +40,15 @@ def logout_view(request):
     if request.method == 'POST':
         logout(request)
         return redirect('padmex:index')
+
+def recuperar_view(request):
+    if request.method == 'POST':
+        form = forms.EnviarCorreo(request.POST)
+        if form.is_valid():
+            email = EmailMessage('Contraseña de PADMEX ', 'Esta es tu contraseña: adsfa123',
+                                 'nestor.martinez.98@hotmail.com')
+            email.send()
+            return redirect('padmex:index')
+    else:
+        form = forms.EnviarCorreo()
+    return render(request, 'accounts/recuperar.html', {'form': form})

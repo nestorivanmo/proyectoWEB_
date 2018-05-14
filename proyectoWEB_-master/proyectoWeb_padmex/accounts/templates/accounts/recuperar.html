@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>PadMex | Productos</title>
+	<title>PadMex | Galería</title>
 	<link  rel="stylesheet" type="text/css" href="{% static 'padmex/css/style.css' %}"/>
     <link rel="icon" type="text/css" href="{% static 'padmex/img/padmex_logo.png' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'padmex/css/materialize.min.css' %}"/>
@@ -123,11 +123,8 @@ main {
 .carrito {
 	margin-top: 20px;
 }
-.dimensiones{
-    width: 100%;
-    height: 400px;
-}
 .boton {
+    border: 0px;
 	color: white;
 	padding: 12px;
 	margin: 12px;
@@ -178,7 +175,7 @@ li:hover form button{
 				<ul class="right hide-on-med-and-down">
 	    			<li><a href="{% url 'padmex:olimpicas' %}">Albercas Olímpicas</a></li>
 	    			<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
-	    			<li><a class="negro" href="{% url 'padmex:productos' %}">Productos</a></li>
+	    			<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 	    		</ul>
 			</div>
 			<div class="col m5 s12">
@@ -190,11 +187,11 @@ li:hover form button{
                                 <button class="navbtn" type="submit">Logout</button>
                         </form>
                     </li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown5">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
+                        li><a class="dropdown-trigger" href="#!" data-target="dropdown5">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
                     {% else %}
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
                         <li><a href="{% url 'accounts:login' %}">Agendar una cita</a></li>
-                        {% endif %}
+                       {% endif %}
 					<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Mostrar más<i class="material-icons right">arrow_drop_down</i></a></li>
 	    		</ul>
 			</div>
@@ -205,7 +202,7 @@ li:hover form button{
 	<ul class="sidenav" id="mobile-demo">
 		<li><a href="{% url 'padmex:olimpicas' %}">Albercas Olímpicas</a></li>
 		<li><a href="{% url 'padmex:residenciales' %}">Albercas Residenciales</a></li>
-		<li><a class="negro" href="{% url 'padmex:productos' %}">Productos</a></li>
+		<li><a href="{% url 'padmex:productos' %}">Productos</a></li>
 		<li class="divider"></li>
 		{% if user.is_authenticated %}
                     <li>
@@ -215,10 +212,10 @@ li:hover form button{
                         </form>
                     </li>
                         li><a class="dropdown-trigger" href="#!" data-target="dropdown6">Citas<i class="material-icons right">arrow_drop_down</i></a></li>
-                    {% else %}
+                     {% else %}
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown4">Sign In/Up<i class="material-icons right">arrow_drop_down</i></a></li>
                         <li><a href="{% url 'accounts:login' %}">Agendar una cita</a></li>
-                    {% endif %}
+                     {% endif %}
 		<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Más<i class="material-icons right">arrow_drop_down</i></a></li>
 	</ul>
 
@@ -254,126 +251,25 @@ li:hover form button{
 		<li><a class="ln" href="{% url 'padmex:exito' %}">Historial</a></li>
 	</ul>
 
-    <main>
-
-        <center><h1 class="lob">Productos</h1></center>
-
-
-        <ul class="collapsible">
-        <li>
-            <div class="collapsible-header azul lob"><div class="container"><center>Acabado</center></div></div>
-            <div class="collapsible-body"><span>
-                <div class="container">
-                    <div class="row">
-            {% for prod in object_list %}
-            {% if prod.categoria == "Acabados" %}
-                <div class="col m3 s12">
-                    <div class="card ">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="../../static/padmex/img/{{ prod.imagen }}">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{ prod.nombreProd }} - {{ prod.precio }}<i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ prod.nombreProd }}<i class="material-icons right">close</i></span>
-                            <p>{{ prod.descripcionProd }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
+<main>
+	     <div class="container">
+            <div class="row">
+				<div class="col s12 cuadro negro fjo">
+					<h4>Introduce tu correo</h4>
+				</div>
+			</div>
+            <div class="cuadro blanco">
+                <form class="site-form", action="{% url 'accounts:recuperar' %}", method="post", enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form }}
+                    <center><input class="boton negro" type="submit" value="Verifica"></center>
+                </form>
+            </div>
         </div>
-                </div>
-            </span></div>
-        </li>
-        <li>
-            <div class="collapsible-header azul lob"><div class="container"><center>Mantenimiento</center></div></div>
-            <div class="collapsible-body"><span>
-                <div class="container">
-                 <div class="row">
-            {% for prod in object_list %}
-            {% if prod.categoria == "Mantenimiento" %}
-                <div class="col m3 s12">
-                    <div class="card ">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="../../static/padmex/img/{{ prod.imagen }}">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{ prod.nombreProd }} - {{ prod.precio }}<i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ prod.nombreProd }}<i class="material-icons right">close</i></span>
-                            <p>{{ prod.descripcionProd }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-        </div>
-                </div>
-            </span></div>
-        </li>
-        <li>
-            <div class="collapsible-header azul lob"><div class="container"><center>Accesorios</center></div></div>
-            <div class="collapsible-body"><span>
-                <div class="container">
-                 <div class="row">
-            {% for prod in object_list %}
-            {% if prod.categoria == "Accesorios" %}
-                <div class="col m3 s12">
-                    <div class="card ">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="../../static/padmex/img/{{ prod.imagen }}">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{ prod.nombreProd }} - {{ prod.precio }}<i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ prod.nombreProd }}<i class="material-icons right">close</i></span>
-                            <p>{{ prod.descripcionProd }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-        </div>
-                </div>
-            </span></div>
-        </li>
-        <li>
-            <div class="collapsible-header azul lob"><div class="container"><center>Iluminación</center></div></div>
-            <div class="collapsible-body"><span>
-                <div class="container">
-                     <div class="row">
-            {% for prod in object_list %}
-            {% if prod.categoria == "Iluminación" %}
-                <div class="col m3 s12">
-                    <div class="card ">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="../../static/padmex/img/{{ prod.imagen }}">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{ prod.nombreProd }} - {{ prod.precio }}<i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ prod.nombreProd }}<i class="material-icons right">close</i></span>
-                            <p>{{ prod.descripcionProd }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-        </div>
-                </div>
-            </span></div>
-        </li>
-    </ul>
 
+</main>
 
-    </main>
-
-    <footer class="azul">
+	<footer class="azul">
           <div class="container">
             <div class="row">
               <div class="col m3 s12">

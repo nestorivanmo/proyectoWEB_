@@ -8,3 +8,4 @@ admin.site.register(Producto)
 admin.site.register(Pedido)
 admin.site.register(Detalle)
 admin.site.register(Cita)
+

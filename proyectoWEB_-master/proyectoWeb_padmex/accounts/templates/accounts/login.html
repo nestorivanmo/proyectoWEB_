@@ -124,6 +124,7 @@ main {
 	margin-top: 20px;
 }
 .boton {
+    border: 0px;
 	color: white;
 	padding: 12px;
 	margin: 12px;
@@ -236,7 +237,7 @@ li:hover form button{
 	</ul>
 
     <ul id="dropdown4" class="dropdown-content">
-		<li><	a class="ln" href="{% url 'accounts:login' %}">Entrar</a></li>
+		<li><a class="ln" href="{% url 'accounts:login' %}">Entrar</a></li>
 		<li><a class="ln" href="{% url 'accounts:signup' %}">Registrarse</a></li>
 	</ul>
 
@@ -259,8 +260,14 @@ li:hover form button{
 	        {% if request.GET.next %}
 	            <input type="hidden" name="next" value="{{ request.GET.next }}">
 	        {% endif %}
-	        <a href="{% url 'accounts:signup' %}">¿No tienes cuenta?</a><br>
-	        <input type="submit" value="Login">
+	        <a href="{% url 'accounts:recuperar' %}">Olvide mi contraseña</a><br>
+            <br>
+                <a href="{% url 'accounts:signup' %}">¿No tienes cuenta?</a><br>
+	        <br>
+
+                <input type="submit" value="Login" class="boton negro ">
+
+
 	    </form>
 	</div>
 

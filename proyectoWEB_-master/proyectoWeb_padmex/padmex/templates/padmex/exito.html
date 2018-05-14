@@ -26,7 +26,7 @@ background-attachment: fixed;
 /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
 background-size: cover;
 /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
-background-color: white;
+background-color: black;
 display: flex;
 min-height: 100vh;
 flex-direction: column;
@@ -87,11 +87,11 @@ main {
 }
 .blanco {
 	color: black !important;
-	background-color:rgba(255,255,255,0.7);
+	background-color:rgb(255,255,255);
 }
 .amarillo {
 	color: black !important;
-	background-color:rgba(222,180,0,0.7); /*#DEB400*/
+	background-color:rgb(255, 255, 0, 0.7); /*#DEB400*/
 	border-radius: 10px;
 }
 
@@ -169,7 +169,7 @@ li:hover form button{
 </style>
 
 </head>
-<body background="../../static/padmex/img/fondo8.jpg">
+<body >
 
 	<div class="navbar-fixed">
 	<nav class="azul">
@@ -272,6 +272,7 @@ li:hover form button{
                         {% for citas in object_list %}
                             {% if citas.cliente_FK.pk == user.pk %}
                                 <a class="carousel-item">
+                                {% if citas.status == "Por atender" %}
                                     <div class="col s12 blanco">
                                         <p><strong class="fjo">Asunto: </strong> {{ citas.asunto }}</p>
                                         <p><strong class="fjo">Mensaje: </strong> {{ citas.contenido }}</p>
@@ -279,12 +280,23 @@ li:hover form button{
                                         <p><strong class="fjo">Fecha: </strong> {{ citas.fecha }}</p>
                                         <p><strong class="fjo">Estado: </strong> {{ citas.status }}</p>
                                     </div>
+                                {% elif citas.status == "Atendida" %}
+                                     <div class="col s12 blanco">
+                                        <p><strong class="fjo">Asunto: </strong> {{ citas.asunto }}</p>
+                                        <p><strong class="fjo">Mensaje: </strong> {{ citas.contenido }}</p>
+                                        <div class="divider"></div>
+                                        <p><strong class="fjo">Fecha: </strong> {{ citas.fecha }}</p>
+                                        <p><strong class="fjo">Estado: </strong> {{ citas.status }}</p>
+                                    </div>
+                                {% endif %}
+
                                 </a>
                             {% endif %}
                         {% endfor %}
                         {% for citas in object_list %}
                             {% if citas.cliente_FK.pk == user.pk %}
                                 <a class="carousel-item">
+                                    {% if citas.status == "Por atender" %}
                                     <div class="col s12 blanco">
                                         <p><strong class="fjo">Asunto: </strong> {{ citas.asunto }}</p>
                                         <p><strong class="fjo">Mensaje: </strong> {{ citas.contenido }}</p>
@@ -292,6 +304,15 @@ li:hover form button{
                                         <p><strong class="fjo">Fecha: </strong> {{ citas.fecha }}</p>
                                         <p><strong class="fjo">Estado: </strong> {{ citas.status }}</p>
                                     </div>
+                                {% elif citas.status == "Atendida" %}
+                                     <div class="col s12 blanco">
+                                        <p><strong class="fjo">Asunto: </strong> {{ citas.asunto }}</p>
+                                        <p><strong class="fjo">Mensaje: </strong> {{ citas.contenido }}</p>
+                                        <div class="divider"></div>
+                                        <p><strong class="fjo">Fecha: </strong> {{ citas.fecha }}</p>
+                                        <p><strong class="fjo">Estado: </strong> {{ citas.status }}</p>
+                                    </div>
+                                {% endif %}
                                 </a>
                             {% endif %}
                         {% endfor %}
